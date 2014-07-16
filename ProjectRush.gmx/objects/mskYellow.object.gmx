@@ -25,7 +25,10 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string></string>
+            <string>image_angle=plyYellow.direction
+x=plyYellow.x
+y=plyYellow.y
+</string>
           </argument>
         </arguments>
       </action>

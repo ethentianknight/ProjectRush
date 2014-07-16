@@ -2,7 +2,7 @@
 <object>
   <spriteName>spYellow</spriteName>
   <solid>0</solid>
-  <visible>-1</visible>
+  <visible>0</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>parPlayer</parentName>
@@ -60,7 +60,7 @@ else
     speed = 0
 }
 direction = point_direction(x,y,plyRed.x,plyRed.y)
-
+instance_create(x,y,mskYellow)
     
     
     
