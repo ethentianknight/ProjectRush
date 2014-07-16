@@ -1,0 +1,2 @@
+playerSpeed = 2
+
