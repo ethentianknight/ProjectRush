@@ -27,6 +27,7 @@
             <kind>1</kind>
             <string>global.yFollow = true
 playerSpeed = 2
+instance_create(x,y,mskYellow)
 </string>
           </argument>
         </arguments>
@@ -53,14 +54,14 @@ playerSpeed = 2
 if distance_to_object(plyRed)&gt;5 &amp;&amp; global.yFollow == true
 {
     //Avoid silly things like solid objects
-    mp_potential_step(plyRed.x, plyRed.y, playerSpeed, true)
+    mp_potential_step(plyRed.x, plyRed.y, playerSpeed, false)
 }
 else
 {
     speed = 0
 }
 direction = point_direction(x,y,plyRed.x,plyRed.y)
-instance_create(x,y,mskYellow)
+
     
     
     
