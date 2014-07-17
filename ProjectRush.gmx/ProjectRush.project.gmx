@@ -28,6 +28,8 @@
       <sprite>sprites\spConnectClientSuccess</sprite>
       <sprite>sprites\spCursorDot</sprite>
     </sprites>
+    <sprite>sprites\spBoss1Hands</sprite>
+    <sprite>sprites\spBoss1Head</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -55,8 +57,8 @@
     </objects>
   </objects>
   <rooms name="rooms">
-    <room>rooms\NetworkingRoom</room>
     <room>rooms\Main</room>
+    <room>rooms\NetworkingRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
