@@ -82,11 +82,11 @@ if global.controller = false
         m=sqrt(sqr(dx)+sqr(dy));
         dx/=m;
         dy/=m;
-        if place_free(x+dx*playerSpeed,y)
+        if !place_meeting(x+dx*playerSpeed,y,objSolid)
     {
         x+=dx*playerSpeed;
     }
-        if place_free(x,y+dy*playerSpeed)
+        if !place_meeting(x,y+dy*playerSpeed,objSolid)
             y+=dy*playerSpeed;
     }
     //Point towards mouse
@@ -96,14 +96,21 @@ if global.controller = false
 //Xbox left stick movement
 if global.controller = true
 {
-    if place_free(x+gamepad_axis_value (0, gp_axislh) * playerSpeed,y)
-    hspeed = gamepad_axis_value (0, gp_axislh) * playerSpeed // x-axis movement, speed up is a number that controls how fast the player moves
-    else
-    hspeed = 0
-    if place_free(x,y+gamepad_axis_value (0, gp_axislv) * playerSpeed)
-    vspeed = gamepad_axis_value (0, gp_axislv) * playerSpeed // y-axis movement, speed up is a number that controls how fast the player moves, the - in front of gamepad_axis_value inverted the direction
-    else
-    vspeed = 0
+    //Checking manually for objSolid- ignoring garbage implemented solid collisions.
+    
+    //ADD DIRECTIONAL CHANGE --------------------------------------------------------------------------------------------------------------------------------
+
+
+        if !place_meeting(x+gamepad_axis_value (0, gp_axislh) * playerSpeed,y,objSolid)
+        hspeed = gamepad_axis_value (0, gp_axislh) * playerSpeed // x-axis movement, speed up is a number that controls how fast the player moves
+        else
+        hspeed = 0
+        if !place_meeting(x,y+gamepad_axis_value (0, gp_axislv) * playerSpeed,objSolid)
+        vspeed = gamepad_axis_value (0, gp_axislv) * playerSpeed // y-axis movement, speed up is a number that controls how fast the player moves, the - in front of gamepad_axis_value inverted the direction
+        else
+        vspeed = 0
+
+
     //this makes sure the player stays still when the stick is not being pressed due to the stick being slightly off center
     if hspeed &gt; 1 || hspeed &lt; -1
     {
@@ -125,7 +132,7 @@ if global.controller = true
     //Xbox right stick
     deadZone = 0.4
     //aims player in right direction
-        //Radial deadzone attempt
+    //Radial deadzone
     dzRad = sqrt(sqr(gamepad_axis_value(0,gp_axisrh))+sqr(gamepad_axis_value(0,gp_axisrv)))
     if dzRad &gt; deadZone
     {
