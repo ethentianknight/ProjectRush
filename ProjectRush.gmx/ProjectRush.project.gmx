@@ -13,6 +13,7 @@
     <sprite>sprites\spGreen</sprite>
     <sprite>sprites\spYellow</sprite>
     <sprite>sprites\spGrayBlock</sprite>
+    <sprite>sprites\spError</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -29,6 +30,7 @@
       <object>objects\mskYellow</object>
     </objects>
     <object>objects\objCon</object>
+    <object>objects\Error</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main</room>
