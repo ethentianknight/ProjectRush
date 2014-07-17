@@ -27,8 +27,8 @@
             <kind>1</kind>
             <string>if place_meeting(x,y,CursorDot) &amp;&amp; mouse_check_button_pressed(mb_left)
 {
-global.client_socket = network_create_socket(network_socket_udp);
-var server = network_connect(global.client_socket , '127.0.0.1', 6516);
+client_socket = network_create_socket(network_socket_udp);
+var server = network_connect(client_socket , '127.0.0.1', 6516);
 if server &lt; 0
     {
     //No connection! Failsafe codes here...

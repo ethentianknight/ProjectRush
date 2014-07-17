@@ -27,31 +27,7 @@
             <kind>1</kind>
             <string>global.controller = false
 room_speed = 60
-//Host
-server_socket = network_create_server(network_socket_tcp,6516,4)
-if server_socket &lt; 0
-    {
-    //Connection error! Add failsafe codes here
-    instance_create(700,80,Error)
-    }
 
-/*
-//Client
-client_socket = network_create_socket(network_socket_tcp);
-var server = network_connect(client_socket , '24.18.96.107', 6510)
-if server &lt; 0
-    {
-    //No connection! Failsafe codes here...
-    instance_create(800,300,Error)
-    }
-else
-    {
-    //Connected!
-    instance_create(12,12,objGrayBlock)
-    }
-
-
-*/
 </string>
           </argument>
         </arguments>
@@ -77,9 +53,11 @@ else
             <string>if keyboard_check_pressed(ord("C"))
     {
         if global.controller = true
-            global.controller = false
+            {global.controller = false}
         else
-            global.controller = true
+            {global.controller = true}
+        plyRed.hspeed = 0
+        plyRed.vspeed = 0
     }
     
     // Networking is the next big thing. port 6516-6518 is what we'll be using.

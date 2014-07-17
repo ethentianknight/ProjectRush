@@ -86,9 +86,14 @@ if global.controller = false
 //Xbox left stick movement
 if global.controller = true
 {
+    if place_free(x+gamepad_axis_value (0, gp_axislh) * playerSpeed,y)
     hspeed = gamepad_axis_value (0, gp_axislh) * playerSpeed // x-axis movement, speed up is a number that controls how fast the player moves
-    vspeed = gamepad_axis_value (0, gp_axislv) * playerSpeed // y-axi movement, speed up is a number that controls how fast the player moves, the - in front of gamepad_axis_value inverted the direction
-    
+    else
+    hspeed = 0
+    if place_free(x,y+gamepad_axis_value (0, gp_axislv) * playerSpeed)
+    vspeed = gamepad_axis_value (0, gp_axislv) * playerSpeed // y-axis movement, speed up is a number that controls how fast the player moves, the - in front of gamepad_axis_value inverted the direction
+    else
+    vspeed = 0
     //this makes sure the player stays still when the stick is not being pressed due to the stick being slightly off center
     if hspeed &gt; 1 || hspeed &lt; -1
     {
