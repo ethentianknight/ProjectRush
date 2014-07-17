@@ -28,6 +28,7 @@
       <object>objects\mskRed</object>
       <object>objects\mskYellow</object>
     </objects>
+    <object>objects\objCon</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Main</room>
