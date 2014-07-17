@@ -25,7 +25,13 @@
         <arguments>
           <argument>
             <kind>1</kind>
+<<<<<<< HEAD
             <string>global.server_socket = network_create_server(network_socket_tcp, 6510, 4);
+=======
+            <string>if place_meeting(x,y,CursorDot) &amp;&amp; mouse_check_button_pressed(mb_left)
+{
+global.server_socket = network_create_server(network_socket_udp, 6516, 8);
+>>>>>>> origin/master
 if global.server_socket &lt; 0
     {
     //Connection error! Add failsafe codes here
