@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.controller = true
+            <string>global.controller = false
 room_speed = 60
 </string>
           </argument>
