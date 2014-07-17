@@ -31,6 +31,13 @@
     <sprite>sprites\spBoss1Hands</sprite>
     <sprite>sprites\spBoss1Head</sprite>
     <sprite>sprites\spBullet</sprite>
+    <sprites name="Slime_Sprites">
+      <sprite>sprites\spr_slime</sprite>
+      <sprite>sprites\spr_coloredblood</sprite>
+      <sprite>sprites\spr_slimegore</sprite>
+      <sprite>sprites\spr_slimespike</sprite>
+      <sprite>sprites\spr_shadow</sprite>
+    </sprites>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -59,6 +66,13 @@
       <object>objects\btnConnectClient</object>
       <object>objects\CursorDot</object>
       <object>objects\objNetCon</object>
+    </objects>
+    <objects name="Slime_Resources">
+      <object>objects\obj_eneSlime</object>
+      <object>objects\obj_coloredblood</object>
+      <object>objects\obj_slimegore</object>
+      <object>objects\obj_splatterbloodc</object>
+      <object>objects\obj_slimespike</object>
     </objects>
   </objects>
   <rooms name="rooms">
