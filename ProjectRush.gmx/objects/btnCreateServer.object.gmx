@@ -8,7 +8,7 @@
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
   <events>
-    <event eventtype="3" enumb="0">
+    <event eventtype="6" enumb="4">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -25,9 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if place_meeting(x,y,CursorDot) &amp;&amp; keyboard_check(vk_left)
-{
-global.server_socket = network_create_server(network_socket_tcp, 6510, 4);
+            <string>global.server_socket = network_create_server(network_socket_tcp, 6510, 4);
 if global.server_socket &lt; 0
     {
     //Connection error! Add failsafe codes here
@@ -37,7 +35,6 @@ else
     {
     sprite_index = spCreateServerSuccess
     }
-}
 </string>
           </argument>
         </arguments>
