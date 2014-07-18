@@ -32,7 +32,7 @@ strike = false
 jumpx = x
 jumpy = y
 H = 80
-D = 1
+D = 7
 A = 5
 S = 9
 alarm[0] = 120
@@ -188,6 +188,17 @@ if H &lt; 1
 
 tarx = global.plypos[(target*2-1)]
 tary = global.plypos[(target*2)]
+
+if place_meeting(x,y,obj_slimepatch)
+{
+    D = 7
+    S = 14
+}
+else
+{
+    D = 1
+    S = 9
+}
 </string>
           </argument>
         </arguments>

@@ -179,6 +179,12 @@ else
 // position marking
 global.plypos[1] = x
 global.plypos[2] = y
+
+// speed modifications
+if place_meeting(x,y,obj_slimepatch)
+    playerSpeed = 1
+else 
+    playerSpeed = 2
 </string>
           </argument>
         </arguments>

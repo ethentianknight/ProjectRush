@@ -163,6 +163,11 @@ else
     
 global.plypos[3] = x
 global.plypos[4] = y
+
+if place_meeting(x,y,obj_slimepatch)
+    playerSpeed = 1
+else 
+    playerSpeed = 2
 </string>
           </argument>
         </arguments>
