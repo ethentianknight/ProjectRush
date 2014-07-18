@@ -3,7 +3,7 @@
   <spriteName>spr_slime</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-3</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>color = choose(c_blue,c_red,c_green)
+            <string>color = choose(c_blue,c_red,c_green,c_yellow,c_purple,c_orange,c_silver)
 scolor = color
 bounce = false
 strike = false
@@ -38,6 +38,8 @@ S = 9
 alarm[0] = 120
 alarm[2] = 30
 hit = false
+playercount = instance_number(parPlayer)
+target = irandom_range(1,playercount)
 </string>
           </argument>
         </arguments>
@@ -84,10 +86,13 @@ hit = false
           <argument>
             <kind>1</kind>
             <string>alarm[2] = 60
-if distance_to_point(plyRed.x,plyRed.y) &lt; 64
+if distance_to_point(tarx,tary) &lt; 64
     repeat 3
         with instance_create(x,y,obj_slimespike)
+        {
             color = other.color
+            move_towards_point(other.tarx,other.tary,8)
+        }
 </string>
           </argument>
         </arguments>
@@ -135,11 +140,11 @@ speed = 0
           <argument>
             <kind>1</kind>
             <string>alarm[0] = 120
-if distance_to_point(plyRed.x,plyRed.y) &lt; 750
-and distance_to_point(plyRed.x,plyRed.y) &gt; 64
+if distance_to_point(tarx,tary) &lt; 750
+and distance_to_point(tarx,tary) &gt; 64
 {
-    jumpx = plyRed.x + irandom_range(-10,10)
-    jumpy = plyRed.y + irandom_range(-10,10)
+    jumpx = tarx + irandom_range(-10,10)
+    jumpy = tary + irandom_range(-10,10)
     bounce = true
     alarm[1] = 8
 }
@@ -180,6 +185,9 @@ if H &lt; 1
         with instance_create(x,y,obj_splatterbloodc)
             color = other.color
 }
+
+tarx = global.plypos[(target*2-1)]
+tary = global.plypos[(target*2)]
 </string>
           </argument>
         </arguments>
@@ -228,11 +236,17 @@ if H &lt; 1
             <string>if hit = false &amp;&amp; bounce = false
 {
     H -= (other.speed - D)
+    splashx = other.x
+    splashy = other.y
     hit = true
     alarm[3] = 20
     repeat 7
         with instance_create(x,y,obj_coloredblood)
+        {
             color = other.scolor
+            move_towards_point(other.splashx,other.splashy,random_range(11,15))
+            direction -= random_range(160,200)
+        }
 }
 </string>
           </argument>

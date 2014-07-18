@@ -25,11 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>move_towards_point(plyRed.x,plyRed.y,8)
-alarm[0] = 8
+            <string>alarm[0] = 8
 direction = direction - irandom_range(-30,30)
 A = 7
-image_angle = direction
 </string>
           </argument>
         </arguments>
@@ -77,6 +75,7 @@ image_angle = direction
             <kind>1</kind>
             <string>if place_meeting(x,y,objSolid)
     instance_destroy()
+image_angle = direction
 </string>
           </argument>
         </arguments>

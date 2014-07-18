@@ -25,9 +25,9 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>image_angle=plyRed.mask_image_angle
-x=plyRed.x
-y=plyRed.y
+            <string>image_angle=player1.mask_image_angle
+x=player1.x
+y=player1.y
 </string>
           </argument>
         </arguments>

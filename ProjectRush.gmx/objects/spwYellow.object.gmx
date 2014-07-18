@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if global.spawnedRed = true &amp;&amp; global.spawnedYellow = false &amp;&amp; !place_meeting(x,y,plyRed)
+            <string>if global.spawnedRed = true &amp;&amp; global.spawnedYellow = false &amp;&amp; !place_meeting(x,y,player1)
 {
     flag = true
     if keyboard_check_pressed(vk_enter) &amp;&amp; global.player1Bound &gt;= 0
@@ -46,7 +46,7 @@
         }
     if flag = true
     {
-        instance_create(x,y,plyYellow)
+        instance_create(x,y,player2)
         global.spawnedYellow = true
     }
 

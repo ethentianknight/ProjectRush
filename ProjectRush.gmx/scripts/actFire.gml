@@ -4,22 +4,22 @@
 //Argument1 = sprite index
 if argument0 = 0
 {
-with instance_create(plyRed.x,plyRed.y,Projectile)
+with instance_create(player1.x,player1.y,Projectile)
     {
-    direction = plyRed.mask_image_angle
+    direction = player1.mask_image_angle
     sprite_index=argument1
     image_angle = direction
-    speed = 15+plyRed.projDamage
+    speed = 15+player1.projDamage
     }
 }
 else if argument0 = 1
 {
-with instance_create(plyYellow.x,plyYellow.y,Projectile)
+with instance_create(player2.x,player2.y,Projectile)
     {
-    direction = plyYellow.mask_image_angle
+    direction = player2.mask_image_angle
     sprite_index=argument1
     image_angle = direction
-    speed = 15+plyYellow.projDamage
+    speed = 15+player2.projDamage
     }
 }
 

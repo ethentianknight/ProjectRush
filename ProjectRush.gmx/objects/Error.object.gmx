@@ -28,13 +28,18 @@
             <string>/*
 The comment block of destiny
 
-Fix slime AI to hop to the nearest foe.
+Fix slime AI to hop to *selected* foe.
 Compressed code would be amazesome, but I don't know how to go about it.
 Current thoughts: create parents known as "player1", "player2",... etc and target them
 towards "player"+playerindex &lt;- concatenated. Would this woirk?
+--I have tried and found no way to reference an object by its name as a string, as such
+--I have no way to make a theoretically infinite amount of players, as that would
+--currently require an infintie switch statement.
 
 Slime blood splatters towards player- I understand the logic, but it would look better
 going the other way, with only a few splatters going towards the player.
+--Understandable, origionally the slime was intended to be attacked with a sword, not a 
+--bullet- will fix
 
 Actually, this is a problem ^
 it splatters towards player 1. Needs to splatter towards bullet owner or bullet entry 

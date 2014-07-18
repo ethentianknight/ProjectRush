@@ -42,6 +42,7 @@
       <sprite>sprites\spr_slimespike</sprite>
       <sprite>sprites\spr_shadow</sprite>
     </sprites>
+    <sprite>sprites\spr_slimepatch</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -50,8 +51,8 @@
   </scripts>
   <objects name="objects">
     <objects name="Players">
-      <object>objects\plyRed</object>
-      <object>objects\plyYellow</object>
+      <object>objects\player1</object>
+      <object>objects\player2</object>
       <objects name="Spawners">
         <object>objects\spwRed</object>
         <object>objects\spwYellow</object>
@@ -87,6 +88,7 @@
     <objects name="TitleResources">
       <object>objects\TitleCon</object>
     </objects>
+    <object>objects\obj_slimepatch</object>
   </objects>
   <rooms name="rooms">
     <room>rooms\Title</room>

@@ -27,7 +27,7 @@
             <kind>1</kind>
             <string>if global.spawnedRed = false
 {
-    instance_create(x,y,plyRed)
+    instance_create(x,y,player1)
     global.spawnedRed = true
 }
 </string>
