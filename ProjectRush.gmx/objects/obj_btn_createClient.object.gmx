@@ -32,12 +32,12 @@ var server = network_connect(client_socket , '127.0.0.1', 6516);
 if server &lt; 0
     {
     //No connection! Failsafe codes here...
-    sprite_index = spCreateClientFailure
+    image_index = 1
     }
 else
     {
     //Connected!
-    sprite_index = spCreateClientSuccess
+    image_index = 2
     }
 }
 </string>

@@ -31,11 +31,11 @@ var n_id = ds_map_find_value(async_load, "id");
 if n_id == global.client_socket
     {
     //We have a new packet from the server
-    sprite_index = spConnectClientSuccess
+    image_index = 2
     } 
     else
     {
-    sprite_index = spConnectClientFailure
+    image_index = 1
     }
 }
 </string>

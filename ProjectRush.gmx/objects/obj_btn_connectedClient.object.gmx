@@ -35,7 +35,7 @@ if n_id == server_socket                                //check id to make sure 
         {                                                   //get the socket id of the connection
         var sock = ds_map_find_value(async_load, "socket"); //and store it in a variable
         ds_list_add(socketlist, sock);                      //then write it to a ds_list for future reference
-        sprite_index = spClientConnectedSuccess
+        image_index = 2
         }
     }
 }

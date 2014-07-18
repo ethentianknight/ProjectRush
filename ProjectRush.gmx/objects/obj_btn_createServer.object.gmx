@@ -31,11 +31,11 @@ server_socket = network_create_server(network_socket_tcp, 6510, 4);
 if server_socket &lt; 0
     {
     //Connection error! Add failsafe codes here
-    sprite_index = spCreateServerFailure
+    image_index = 1
     }
 else
     {
-    sprite_index = spCreateServerSuccess
+    image_index = 2
     }
 }
 </string>
