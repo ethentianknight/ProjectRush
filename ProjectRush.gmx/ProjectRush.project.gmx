@@ -39,10 +39,7 @@
     <objects name="Players">
       <object>objects\obj_player</object>
       <objects name="Spawners">
-        <object>objects\obj_spwRed</object>
-      </objects>
-      <objects name="Masks">
-        <object>objects\obj_mskRed</object>
+        <object>objects\obj_playerSpawn</object>
       </objects>
     </objects>
     <object>objects\obj_Con</object>
