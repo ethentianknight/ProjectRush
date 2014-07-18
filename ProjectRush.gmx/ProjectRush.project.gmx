@@ -51,7 +51,7 @@
   </scripts>
   <objects name="objects">
     <objects name="Players">
-      <object>objects\player1</object>
+      <object>objects\player</object>
       <object>objects\player2</object>
       <objects name="Spawners">
         <object>objects\spwRed</object>

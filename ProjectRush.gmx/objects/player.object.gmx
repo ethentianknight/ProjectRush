@@ -77,16 +77,16 @@ if global.player1Bound &lt; 0
 {
     dx = (keyboard_check(global.rRight)) - (keyboard_check(global.rLeft));
     dy = (keyboard_check(global.rDown)) - (keyboard_check(global.rUp));
-    if (dx!=0 or dy!=0) 
+    if (dx != 0 or dy != 0) 
     {
         m=sqrt(sqr(dx)+sqr(dy));
         dx/=m;
         dy/=m;
-        if !place_meeting(x+dx*playerSpeed,y,objSolid)
-    {
-        x+=dx*playerSpeed;
-    }
-        if !place_meeting(x,y+dy*playerSpeed,objSolid)
+        if !place_meeting(x + dx * playerSpeed, y, objSolid)
+        {
+            x+=dx*playerSpeed;
+        }
+        if !place_meeting(x, y + dy * playerSpeed, objSolid)
             y+=dy*playerSpeed;
     }
     //Point towards mouse
@@ -101,39 +101,39 @@ else
     //ADD DIRECTIONAL CHANGE --------------------------------------------------------------------------------------------------------------------------------
 
 
-        if !place_meeting(x+gamepad_axis_value (global.player1Bound, gp_axislh) * playerSpeed,y,objSolid)
+    if !place_meeting(x + gamepad_axis_value (global.player1Bound, gp_axislh) * playerSpeed, y, objSolid)
         hspeed = gamepad_axis_value (global.player1Bound, gp_axislh) * playerSpeed // x-axis movement, speed up is a number that controls how fast the player moves
-        else
+    else
         hspeed = 0
-        if !place_meeting(x,y+gamepad_axis_value (global.player1Bound, gp_axislv) * playerSpeed,objSolid)
+    if !place_meeting(x, y + gamepad_axis_value (global.player1Bound, gp_axislv) * playerSpeed,objSolid)
         vspeed = gamepad_axis_value (global.player1Bound, gp_axislv) * playerSpeed // y-axis movement, speed up is a number that controls how fast the player moves, the - in front of gamepad_axis_value inverted the direction
-        else
+    else
         vspeed = 0
 
 
     //this makes sure the player stays still when the stick is not being pressed due to the stick being slightly off center
     if hspeed &gt; 1 || hspeed &lt; -1
     {
-    hspeed = hspeed
+        hspeed = hspeed
     }
     else
     {
-    hspeed = 0
+        hspeed = 0
     }
     if vspeed &gt; 1 || vspeed &lt; -1
     {
-    vspeed = vspeed
+        vspeed = vspeed
     }
     else
     {
-    vspeed = 0
+        vspeed = 0
     }
     
     //Xbox right stick
     deadZone = 0.4
     //aims player in right direction
     //Radial deadzone
-    dzRad = sqrt(sqr(gamepad_axis_value(global.player1Bound,gp_axisrh))+sqr(gamepad_axis_value(global.player1Bound,gp_axisrv)))
+    dzRad = sqrt(sqr(gamepad_axis_value(global.player1Bound, gp_axisrh)) + sqr(gamepad_axis_value(global.player1Bound, gp_axisrv)))
     if dzRad &gt; deadZone
     {
         mask_image_angle = point_direction(0, 0, gamepad_axis_value(global.player1Bound, gp_axisrh), gamepad_axis_value(global.player1Bound, gp_axisrv))
@@ -169,7 +169,7 @@ if fireCool &lt; 1
     {
     if firing
         {
-            actFire(0,spBullet)
+            actFire(0, spBullet)
             fireCool = autoCool
         }
     }
