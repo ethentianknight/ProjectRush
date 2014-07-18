@@ -40,7 +40,7 @@ firing = false
 fireCool = 0
 
 playerSpeed = 2
-instance_create(x,y,mskRed)
+instance_create(x,y,obj_mskRed)
 </string>
           </argument>
         </arguments>

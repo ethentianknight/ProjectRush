@@ -38,7 +38,7 @@ S = 9
 alarm[0] = 120
 alarm[2] = 30
 hit = false
-playercount = instance_number(parPlayer)
+playercount = instance_number(obj_par_player)
 target = irandom_range(1,playercount)
 </string>
           </argument>

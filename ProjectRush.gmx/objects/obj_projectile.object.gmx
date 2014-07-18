@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if x&gt;room_width or x&lt;0 or y&gt;room_height or y&lt;0 or place_meeting(x,y,objSolid)
+            <string>if x&gt;room_width or x&lt;0 or y&gt;room_height or y&lt;0 or place_meeting(x,y,obj_par_solid)
 instance_destroy()
 
 

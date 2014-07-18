@@ -39,7 +39,10 @@
     <objects name="Players">
       <object>objects\obj_player</object>
       <objects name="Spawners">
-        <object>objects\obj_playerSpawn</object>
+        <object>objects\obj_spwRed</object>
+      </objects>
+      <objects name="Masks">
+        <object>objects\obj_mskRed</object>
       </objects>
     </objects>
     <object>objects\obj_Con</object>
@@ -64,9 +67,6 @@
       <object>objects\obj_btn_connectClient</object>
       <object>objects\obj_cursorDot</object>
       <object>objects\obj_netCon</object>
-    </objects>
-    <objects name="TitleResources">
-      <object>objects\obj_titleCon</object>
     </objects>
     <object>objects\obj_slimepatch</object>
   </objects>
