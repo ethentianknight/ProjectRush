@@ -247,6 +247,8 @@ tary = global.plypos[(target*2)]
             move_towards_point(other.splashx,other.splashy,random_range(11,15))
             direction -= random_range(160,200)
         }
+    with instance_create(x,y,obj_slimegore)
+        color = other.color
 }
 </string>
           </argument>
