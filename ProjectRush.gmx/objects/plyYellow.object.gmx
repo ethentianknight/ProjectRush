@@ -3,7 +3,7 @@
   <spriteName>spYellow</spriteName>
   <solid>0</solid>
   <visible>0</visible>
-  <depth>0</depth>
+  <depth>-5</depth>
   <persistent>0</persistent>
   <parentName>parPlayer</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -25,7 +25,17 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.yFollow = true
+            <string>
+//This is projectile bonus speed, base speed is added in actFire
+projSpeed = 0
+//This is the full projectile damage.
+projDamage = 0
+//Cooldown in frames for next bullet
+autoCool = 20
+//Initialize variables so we don't crash
+firing = false
+fireCool = 0
+
 playerSpeed = 2
 instance_create(x,y,mskYellow)
 </string>
@@ -50,21 +60,106 @@ instance_create(x,y,mskYellow)
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>//Step towards Red if there's enough distance
-if distance_to_object(plyRed)&gt;5 &amp;&amp; global.yFollow == true
+            <string>/* TO DO #########################
+Toggle gamepad
+give look a deadzone for changing the mask
+Add test projectiles
+
+*/
+
+//Movement
+
+//Keyboard- Courtesy of BBGaming
+if global.player2Bound &lt; 0
 {
-    //Avoid silly things like solid objects
-    mp_potential_step(plyRed.x, plyRed.y, playerSpeed, false)
+    dx = (keyboard_check(global.rRight)) - (keyboard_check(global.rLeft));
+    dy = (keyboard_check(global.rDown)) - (keyboard_check(global.rUp));
+    if (dx!=0 or dy!=0) 
+    {
+        m=sqrt(sqr(dx)+sqr(dy));
+        dx/=m;
+        dy/=m;
+        if !place_meeting(x+dx*playerSpeed,y,objSolid)
+    {
+        x+=dx*playerSpeed;
+    }
+        if !place_meeting(x,y+dy*playerSpeed,objSolid)
+            y+=dy*playerSpeed;
+    }
+    //Point towards mouse
+    mask_image_angle=point_direction(x,y,mouse_x,mouse_y)
 }
+//Gamepad - looking for original source
+//Xbox left stick movement
 else
 {
-    speed = 0
-}
-direction = point_direction(x,y,plyRed.x,plyRed.y)
+    //Checking manually for objSolid- ignoring garbage implemented solid collisions.
+    
+    //ADD DIRECTIONAL CHANGE --------------------------------------------------------------------------------------------------------------------------------
 
+
+        if !place_meeting(x+gamepad_axis_value (global.player2Bound, gp_axislh) * playerSpeed,y,objSolid)
+        hspeed = gamepad_axis_value (global.player2Bound, gp_axislh) * playerSpeed // x-axis movement, speed up is a number that controls how fast the player moves
+        else
+        hspeed = 0
+        if !place_meeting(x,y+gamepad_axis_value (global.player2Bound, gp_axislv) * playerSpeed,objSolid)
+        vspeed = gamepad_axis_value (global.player2Bound, gp_axislv) * playerSpeed // y-axis movement, speed up is a number that controls how fast the player moves, the - in front of gamepad_axis_value inverted the direction
+        else
+        vspeed = 0
+
+
+    //this makes sure the player stays still when the stick is not being pressed due to the stick being slightly off center
+    if hspeed &gt; 1 || hspeed &lt; -1
+    {
+    hspeed = hspeed
+    }
+    else
+    {
+    hspeed = 0
+    }
+    if vspeed &gt; 1 || vspeed &lt; -1
+    {
+    vspeed = vspeed
+    }
+    else
+    {
+    vspeed = 0
+    }
     
-    
-    
+    //Xbox right stick
+    deadZone = 0.4
+    //aims player in right direction
+    //Radial deadzone
+    dzRad = sqrt(sqr(gamepad_axis_value(global.player2Bound,gp_axisrh))+sqr(gamepad_axis_value(global.player2Bound,gp_axisrv)))
+    if dzRad &gt; deadZone
+    {
+        mask_image_angle = point_direction(0, 0, gamepad_axis_value(global.player2Bound, gp_axisrh), gamepad_axis_value(global.player2Bound, gp_axisrv))
+        firing = true
+    }
+    else
+    {
+        mask_image_angle = direction
+        firing = false
+    }
+}
+
+if global.player2Bound &lt; 0
+    {
+    if mouse_check_button(mb_left)
+        firing = true
+    else
+        firing = false
+    }
+if fireCool &lt; 1
+    {
+    if firing
+        {
+            actFire(1,spBullet)
+            fireCool = autoCool
+        }
+    }
+else
+    fireCool -= 1
 </string>
           </argument>
         </arguments>

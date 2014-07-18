@@ -13,7 +13,14 @@
     <sprite>sprites\spGreen</sprite>
     <sprite>sprites\spYellow</sprite>
     <sprite>sprites\spGrayBlock</sprite>
+    <sprite>sprites\spRedSpawn</sprite>
+    <sprite>sprites\spYellowSpawn</sprite>
+    <sprite>sprites\spBlueSpawn</sprite>
+    <sprite>sprites\spGreenSpawn</sprite>
     <sprite>sprites\spError</sprite>
+    <sprite>sprites\spBoss1Hands</sprite>
+    <sprite>sprites\spBoss1Head</sprite>
+    <sprite>sprites\spBullet</sprite>
     <sprites name="Networking_Buttons">
       <sprite>sprites\spCreateServer</sprite>
       <sprite>sprites\spCreateServerFailure</sprite>
@@ -28,9 +35,6 @@
       <sprite>sprites\spConnectClientSuccess</sprite>
       <sprite>sprites\spCursorDot</sprite>
     </sprites>
-    <sprite>sprites\spBoss1Hands</sprite>
-    <sprite>sprites\spBoss1Head</sprite>
-    <sprite>sprites\spBullet</sprite>
     <sprites name="Slime_Sprites">
       <sprite>sprites\spr_slime</sprite>
       <sprite>sprites\spr_coloredblood</sprite>
@@ -45,27 +49,25 @@
     <script>scripts\actFire.gml</script>
   </scripts>
   <objects name="objects">
+    <objects name="Players">
+      <object>objects\plyRed</object>
+      <object>objects\plyYellow</object>
+      <objects name="Spawners">
+        <object>objects\spwRed</object>
+        <object>objects\spwYellow</object>
+      </objects>
+      <objects name="Masks">
+        <object>objects\mskYellow</object>
+        <object>objects\mskRed</object>
+      </objects>
+    </objects>
+    <object>objects\objCon</object>
     <object>objects\Projectile</object>
     <object>objects\objGrayBlock</object>
+    <object>objects\Error</object>
     <objects name="Parents">
       <object>objects\parPlayer</object>
       <object>objects\objSolid</object>
-    </objects>
-    <objects name="Players">
-      <object>objects\plyYellow</object>
-      <object>objects\plyRed</object>
-      <object>objects\mskRed</object>
-      <object>objects\mskYellow</object>
-    </objects>
-    <object>objects\objCon</object>
-    <object>objects\Error</object>
-    <objects name="NetworkingRoom">
-      <object>objects\btnCreateServer</object>
-      <object>objects\btnCreateClient</object>
-      <object>objects\btnConnectedClient</object>
-      <object>objects\btnConnectClient</object>
-      <object>objects\CursorDot</object>
-      <object>objects\objNetCon</object>
     </objects>
     <objects name="Slime_Resources">
       <object>objects\obj_eneSlime</object>
@@ -74,8 +76,20 @@
       <object>objects\obj_splatterbloodc</object>
       <object>objects\obj_slimespike</object>
     </objects>
+    <objects name="NetworkingRoomResources">
+      <object>objects\btnCreateServer</object>
+      <object>objects\btnCreateClient</object>
+      <object>objects\btnConnectedClient</object>
+      <object>objects\btnConnectClient</object>
+      <object>objects\CursorDot</object>
+      <object>objects\objNetCon</object>
+    </objects>
+    <objects name="TitleResources">
+      <object>objects\TitleCon</object>
+    </objects>
   </objects>
   <rooms name="rooms">
+    <room>rooms\Title</room>
     <room>rooms\Main</room>
     <room>rooms\NetworkingRoom</room>
   </rooms>

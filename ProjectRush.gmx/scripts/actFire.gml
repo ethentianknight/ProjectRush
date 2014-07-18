@@ -12,6 +12,16 @@ with instance_create(plyRed.x,plyRed.y,Projectile)
     speed = 15+plyRed.projDamage
     }
 }
+else if argument0 = 1
+{
+with instance_create(plyYellow.x,plyYellow.y,Projectile)
+    {
+    direction = plyYellow.mask_image_angle
+    sprite_index=argument1
+    image_angle = direction
+    speed = 15+plyYellow.projDamage
+    }
+}
 
 
 

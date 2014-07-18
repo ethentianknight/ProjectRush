@@ -25,9 +25,15 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.controller = false
-room_speed = 60
-
+            <string>room_speed = 60
+global.spawnedRed = false
+global.spawnedYellow = false
+global.spawnedGreen = false
+global.spawnedBlue = false
+global.rLeft = ord('A')
+global.rRight = ord('D')
+global.rUp = ord('W')
+global.rDown = ord('S')
 </string>
           </argument>
         </arguments>
@@ -50,17 +56,10 @@ room_speed = 60
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>if keyboard_check_pressed(ord("C"))
+            <string>if keyboard_check(vk_escape)
     {
-        if global.controller = true
-            {global.controller = false}
-        else
-            {global.controller = true}
-        plyRed.hspeed = 0
-        plyRed.vspeed = 0
+        game_end()
     }
-    
-    // Networking is the next big thing. port 6516-6518 is what we'll be using.
 </string>
           </argument>
         </arguments>
