@@ -179,10 +179,10 @@ if H &lt; 1
 {
     instance_destroy()
     repeat 4
-        with instance_create(x,y,obj_slimegore)
+        with instance_create(x,y,obj_slimeGore)
             color = other.color
     repeat 10
-        with instance_create(x,y,obj_splatterbloodc)
+        with instance_create(x,y,obj_splatterBloodC)
             color = other.color
 }
 
@@ -252,13 +252,13 @@ else
     hit = true
     alarm[3] = 20
     repeat 7
-        with instance_create(x,y,obj_coloredblood)
+        with instance_create(x,y,obj_coloredBlood)
         {
             color = other.scolor
             move_towards_point(other.splashx,other.splashy,random_range(11,15))
             direction -= random_range(160,200)
         }
-    with instance_create(x,y,obj_slimegore)
+    with instance_create(x,y,obj_slimeGore)
         color = other.color
 }
 </string>

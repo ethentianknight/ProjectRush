@@ -52,7 +52,7 @@
   </views>
   <instances>
     <instance objName="obj_slimepatch" x="992" y="608" name="inst_0782A9FF" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_Con" x="608" y="0" name="inst_DA916101" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="&lt;undefined&gt;" x="192" y="64" name="inst_CBDBC4AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grayBlock" x="0" y="0" name="inst_7D5E5D6A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grayBlock" x="32" y="0" name="inst_789F2064" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_grayBlock" x="64" y="0" name="inst_CE92D3C9" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
@@ -177,7 +177,6 @@
     <instance objName="obj_slimepatch" x="928" y="640" name="inst_6731F8E3" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slimepatch" x="992" y="640" name="inst_85FE03FE" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="obj_slimepatch" x="960" y="608" name="inst_5A6CCE9B" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="obj_playerSpawn" x="192" y="64" name="inst_CBDBC4AA" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles/>
   <PhysicsWorld>0</PhysicsWorld>
