@@ -8,38 +8,24 @@
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
-    <sprite>sprites\spRed</sprite>
-    <sprite>sprites\spBlue</sprite>
-    <sprite>sprites\spGreen</sprite>
-    <sprite>sprites\spYellow</sprite>
-    <sprite>sprites\spGrayBlock</sprite>
-    <sprite>sprites\spRedSpawn</sprite>
-    <sprite>sprites\spYellowSpawn</sprite>
-    <sprite>sprites\spBlueSpawn</sprite>
-    <sprite>sprites\spGreenSpawn</sprite>
-    <sprite>sprites\spError</sprite>
-    <sprite>sprites\spBoss1Hands</sprite>
-    <sprite>sprites\spBoss1Head</sprite>
-    <sprite>sprites\spBullet</sprite>
+    <sprite>sprites\spr_player</sprite>
+    <sprite>sprites\spr_block</sprite>
+    <sprite>sprites\spr_error</sprite>
+    <sprite>sprites\spr_Boss1Hands</sprite>
+    <sprite>sprites\spr_Boss1Head</sprite>
+    <sprite>sprites\spr_Bullet</sprite>
     <sprites name="Networking_Buttons">
-      <sprite>sprites\spCreateServer</sprite>
-      <sprite>sprites\spCreateServerFailure</sprite>
-      <sprite>sprites\spCreateServerSuccess</sprite>
-      <sprite>sprites\spCreateClient</sprite>
-      <sprite>sprites\spCreateClientFailure</sprite>
-      <sprite>sprites\spCreateClientSuccess</sprite>
-      <sprite>sprites\spClientConnected</sprite>
-      <sprite>sprites\spClientConnectedSuccess</sprite>
-      <sprite>sprites\spConnectClient</sprite>
-      <sprite>sprites\spConnectClientFailure</sprite>
-      <sprite>sprites\spConnectClientSuccess</sprite>
-      <sprite>sprites\spCursorDot</sprite>
+      <sprite>sprites\spr_createServer</sprite>
+      <sprite>sprites\spr_createClient</sprite>
+      <sprite>sprites\spr_clientConnected</sprite>
+      <sprite>sprites\spr_connectClient</sprite>
+      <sprite>sprites\spr_cursorDot</sprite>
     </sprites>
     <sprites name="Slime_Sprites">
       <sprite>sprites\spr_slime</sprite>
-      <sprite>sprites\spr_coloredblood</sprite>
-      <sprite>sprites\spr_slimegore</sprite>
-      <sprite>sprites\spr_slimespike</sprite>
+      <sprite>sprites\spr_coloredBlood</sprite>
+      <sprite>sprites\spr_slimeGore</sprite>
+      <sprite>sprites\spr_slimeSpike</sprite>
       <sprite>sprites\spr_shadow</sprite>
     </sprites>
     <sprite>sprites\spr_slimepatch</sprite>
@@ -51,49 +37,46 @@
   </scripts>
   <objects name="objects">
     <objects name="Players">
-      <object>objects\player</object>
-      <object>objects\player2</object>
+      <object>objects\obj_player</object>
       <objects name="Spawners">
-        <object>objects\spwRed</object>
-        <object>objects\spwYellow</object>
+        <object>objects\obj_spwRed</object>
       </objects>
       <objects name="Masks">
-        <object>objects\mskYellow</object>
-        <object>objects\mskRed</object>
+        <object>objects\obj_mskRed</object>
       </objects>
     </objects>
-    <object>objects\objCon</object>
-    <object>objects\Projectile</object>
-    <object>objects\objGrayBlock</object>
-    <object>objects\Error</object>
+    <object>objects\obj_Con</object>
+    <object>objects\obj_projectile</object>
+    <object>objects\obj_grayBlock</object>
+    <object>objects\obj_error</object>
     <objects name="Parents">
-      <object>objects\parPlayer</object>
-      <object>objects\objSolid</object>
+      <object>objects\obj_par_player</object>
+      <object>objects\obj_par_solid</object>
     </objects>
     <objects name="Slime_Resources">
       <object>objects\obj_eneSlime</object>
-      <object>objects\obj_coloredblood</object>
-      <object>objects\obj_slimegore</object>
-      <object>objects\obj_splatterbloodc</object>
-      <object>objects\obj_slimespike</object>
+      <object>objects\obj_coloredBlood</object>
+      <object>objects\obj_slimeGore</object>
+      <object>objects\obj_splatterBloodC</object>
+      <object>objects\obj_slimeSpike</object>
     </objects>
     <objects name="NetworkingRoomResources">
-      <object>objects\btnCreateServer</object>
-      <object>objects\btnCreateClient</object>
-      <object>objects\btnConnectedClient</object>
-      <object>objects\btnConnectClient</object>
-      <object>objects\CursorDot</object>
-      <object>objects\objNetCon</object>
+      <object>objects\obj_btn_createServer</object>
+      <object>objects\obj_btn_createClient</object>
+      <object>objects\obj_btn_connectedClient</object>
+      <object>objects\obj_btn_connectClient</object>
+      <object>objects\obj_cursorDot</object>
+      <object>objects\obj_netCon</object>
     </objects>
     <objects name="TitleResources">
-      <object>objects\TitleCon</object>
+      <object>objects\obj_titleCon</object>
     </objects>
     <object>objects\obj_slimepatch</object>
   </objects>
   <rooms name="rooms">
-    <room>rooms\Title</room>
-    <room>rooms\Main</room>
-    <room>rooms\NetworkingRoom</room>
+    <room>rooms\rm_title</room>
+    <room>rooms\rm_main</room>
+    <room>rooms\rm_networkingRoom</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>

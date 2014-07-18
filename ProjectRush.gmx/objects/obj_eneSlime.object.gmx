@@ -204,7 +204,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="objGrayBlock">
+    <event eventtype="4" ename="obj_grayBlock">
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -227,7 +227,7 @@ else
         </arguments>
       </action>
     </event>
-    <event eventtype="4" ename="Projectile">
+    <event eventtype="4" ename="obj_projectile">
       <action>
         <libid>1</libid>
         <id>603</id>
