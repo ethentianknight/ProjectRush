@@ -25,15 +25,18 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.spawnedRed = false
-global.spawnedYellow = false
-global.spawnedGreen = false
-global.spawnedBlue = false
-global.rLeft = ord('A')
-global.rRight = ord('D')
-global.rUp = ord('W')
-global.rDown = ord('S')
-global.plypos[0] = 0
+            <string>if room = rm_title
+{
+    //Initialize keyboard controls
+    global.rLeft = ord('A')
+    global.rRight = ord('D')
+    global.rUp = ord('W')
+    global.rDown = ord('S')
+}
+else if room = rm_main
+{
+    global.plypos[0] = 0
+}
 </string>
           </argument>
         </arguments>
@@ -73,11 +76,7 @@ if room = rm_title
         }
     else if gamepad_button_check_pressed(0,gp_start)
         {
-        global.player1Bound = 0
-        }
-    else if gamepad_button_check_pressed(1,gp_start)
-        {
-        global.player1Bound = 1
+        global.player1Bound = 
         }
     else
         {

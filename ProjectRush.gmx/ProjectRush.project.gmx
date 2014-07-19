@@ -5,6 +5,7 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\Game Appearance</extension>
+    <extension index="1">extensions\Game Appearance</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">

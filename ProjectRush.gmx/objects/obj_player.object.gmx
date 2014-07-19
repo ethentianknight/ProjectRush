@@ -25,22 +25,20 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.rLeft = ord('A')
-global.rRight = ord('D')
-global.rUp = ord('W')
-global.rDown = ord('S')
-//This is projectile bonus speed, base speed is added in actFire
+            <string>//This is projectile bonus speed, base speed is added in actFire
 projSpeed = 0
+
 //This is the full projectile damage.
 projDamage = 0
+
 //Cooldown in frames for next bullet
 autoCool = 20
+
 //Initialize variables so we don't crash
 firing = false
 fireCool = 0
-
 playerSpeed = 2
-instance_create(x,y,obj_mskRed)
+
 </string>
           </argument>
         </arguments>
