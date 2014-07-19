@@ -5,7 +5,6 @@
   </Configs>
   <NewExtensions>
     <extension index="0">extensions\Game Appearance</extension>
-    <extension index="1">extensions\Game Appearance</extension>
   </NewExtensions>
   <sounds name="sound"/>
   <sprites name="sprites">
@@ -30,6 +29,9 @@
       <sprite>sprites\spr_shadow</sprite>
     </sprites>
     <sprite>sprites\spr_slimepatch</sprite>
+    <sprite>sprites\spr_textOutline</sprite>
+    <sprite>sprites\spr_textCursor</sprite>
+    <sprite>sprites\spr_btn_background</sprite>
   </sprites>
   <backgrounds name="background"/>
   <paths name="paths"/>
@@ -61,20 +63,29 @@
       <object>objects\obj_splatterBloodC</object>
       <object>objects\obj_slimeSpike</object>
     </objects>
-    <objects name="NetworkingRoomResources">
-      <object>objects\obj_btn_createServer</object>
-      <object>objects\obj_btn_createClient</object>
-      <object>objects\obj_btn_connectedClient</object>
-      <object>objects\obj_btn_connectClient</object>
-      <object>objects\obj_cursorDot</object>
-      <object>objects\obj_netCon</object>
-    </objects>
     <object>objects\obj_slimepatch</object>
+    <objects name="Resources">
+      <objects name="rm_networking">
+        <object>objects\obj_btn_createServer</object>
+        <object>objects\obj_btn_createClient</object>
+        <object>objects\obj_btn_connectedClient</object>
+        <object>objects\obj_btn_connectClient</object>
+        <object>objects\obj_cursorDot</object>
+        <object>objects\obj_netCon</object>
+        <object>objects\obj_txt_port</object>
+        <object>objects\obj_buff_str_port</object>
+      </objects>
+      <objects name="rm_gameType">
+        <object>objects\obj_btn_host</object>
+        <object>objects\obj_btn_join</object>
+      </objects>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_title</room>
     <room>rooms\rm_main</room>
-    <room>rooms\rm_networkingRoom</room>
+    <room>rooms\rm_networking</room>
+    <room>rooms\rm_gameType</room>
   </rooms>
   <help>
     <rtf>help.rtf</rtf>
